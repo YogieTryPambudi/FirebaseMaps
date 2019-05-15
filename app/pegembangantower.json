@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "552228160729",
+    "firebase_url": "https://pengembangantower.firebaseio.com",
+    "project_id": "pengembangantower",
+    "storage_bucket": "pengembangantower.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552228160729:android:3d59b3dc0cbd33ec",
+        "android_client_info": {
+          "package_name": "pengembanganTower22_yogie.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552228160729-1pq6k1kvva3q162sif97lfml8vg53mju.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pengembanganTower22_yogie.com",
+            "certificate_hash": "e93f2ae6065d257d7e4962714ed9058cb6557b47"
+          }
+        },
+        {
+          "client_id": "552228160729-iqp78tceiem7hsqpmg2pm9dfqfpmqfc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4B5FyxEJ-xEDfHTcWGBNZSioAYvrxUWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552228160729-iqp78tceiem7hsqpmg2pm9dfqfpmqfc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="79dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="30dp" />
+
+
+    <TextView
+        android:id="@+id/img_description"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="80dp"
+        android:gravity="right"
+        android:text="Judul"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="188dp"
+        android:layout_height="213dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lodingimage" />
+
+
+
+
+</android.support.v7.widget.CardView>
