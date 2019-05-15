@@ -80,7 +80,7 @@ public class FirebaseTambah extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (mUploadTask != null && mUploadTask.isInProgress()) {
-                    Toast.makeText(FirebaseTambah.this, "Upload in progress", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FirebaseTambah.this, "Upload Dalam Proses", Toast.LENGTH_SHORT).show();
                 } else {
                     uploadFile();
                 }
@@ -141,10 +141,10 @@ public class FirebaseTambah extends AppCompatActivity {
                             fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {
-                                    Upload upload = new Upload(edtName.getText().toString().trim(), uri.toString(),edtDescription.getText().toString().trim(),edtLatitude.getText().toString().trim(),edtLongitude.getText().toString().trim());
+                                    Upload upload = new Upload(edtName.getText().toString().trim(), uri.toString(),edtDescription.getText().toString().trim(),Double.parseDouble(edtLatitude.getText().toString().trim()),Double.parseDouble(edtLongitude.getText().toString().trim()));
                                     String uploadID = mDatabaseRef.push().getKey();
                                     mDatabaseRef.child(uploadID).setValue(upload);
-                                    Toast.makeText(FirebaseTambah.this, "Upload successfully", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(FirebaseTambah.this, "Upload Berhasil", Toast.LENGTH_LONG).show();
                                     mImageView.setImageResource(R.drawable.imagepreview);
                                     edtName.setText("");
                                     edtDescription.setText("");
@@ -168,7 +168,7 @@ public class FirebaseTambah extends AppCompatActivity {
                         }
                     });
         } else {
-            Toast.makeText(this, "No file selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Tidak Ada File Yang Dipilih", Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -48,6 +48,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot s : dataSnapshot.getChildren()){
                     Upload upload = s.getValue(Upload.class);
+                    LatLng location = new LatLng(upload.getLatitude(),upload.getLongitude());
+                    mMap.addMarker(new MarkerOptions().position(location).title(upload.getName().setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))));
                 }
             }
 
