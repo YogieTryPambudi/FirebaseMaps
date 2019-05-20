@@ -42,14 +42,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap){
         mMap = googleMap;
         googleMap.setOnMarkerClickListener(this);
-        googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         mUploads.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot s : dataSnapshot.getChildren()){
                     Upload upload = s.getValue(Upload.class);
                     LatLng location = new LatLng(upload.getLatitude(),upload.getLongitude());
-                    mMap.addMarker(new MarkerOptions().position(location).title(upload.getName().setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))));
+                    Marker myMarker = mMap.addMarker(new MarkerOptions().position(location).title(upload.getName()));
+                    myMarker.setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+
+
                 }
             }
 
